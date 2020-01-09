@@ -1,3 +1,9 @@
+/**
+ * title: lunbo
+ * Routes:
+ *  - src/routes/pravite.js
+ */
+
 import { Component } from 'react'
 
 class Lunbo extends Component {

@@ -1,3 +1,8 @@
+/**
+ * title: 首页
+ * Routes:
+ *  - src/routes/pravite.js
+ */
 import styles from './index.css';
 
 export default function() {

@@ -1,18 +1,30 @@
 import { Component } from 'react'
 import { Form, Icon, Input, Button } from 'antd'
+import { connect } from 'dva'
 
 import styles from './index.css'
 
 const { Item } = Form
 
 @Form.create()
+@connect(
+  null,
+  {
+    asyncLogin (payload) {
+      return {
+        type: 'store/asyncLogin',
+        payload
+      }
+    }
+  }
+)
 class Login extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values);
+        this.props.asyncLogin(values)
       }
     });
   };
