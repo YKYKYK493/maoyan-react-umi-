@@ -17,12 +17,12 @@ export default {
           type: 'login',
           payload: data.data.userInfo
         })
-        message.success('登陆成功', 2, () => {
+        message.success('登录成功', 2, () => {
           router.replace('/')
         })
         window.localStorage.setItem('userInfo', JSON.stringify(data.data.userInfo))
       } else {
-        message.error('登陆成功')
+        message.error('登录失败')
       }
     }
   },
